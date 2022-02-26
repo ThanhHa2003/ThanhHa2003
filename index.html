@@ -3,237 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The band</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="./style.css">
+        <title>HTML DOM</title>
 </head>
-<body>
-    <div id="main">
-        <div id="header">
-            <!-- Begin: Nav--> 
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#band">Band</a></li>
-                <li><a href="#tour">Tour</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <a href="">
-                        More
-                        <i class="nav-arrow-down ti-angle-down"></i>
-                    </a> 
-                    <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- End: Nav--> 
-            
-            <!-- Begin: Search button-->
-            <div class="search-btn">
-                <i class="search-icon ti-search"></i>
+</body>
+
+        <div class="main"></div>
+
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Thành viên đăng ký</h3>
+            <p class="desc">Cùng nhau học lập trình miễn phí tại F8 ❤️</p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên đầy đủ</label>
+                <input id="fullname" name="fullname" type="text" placeholder="VD: Phú Thành" class="form-control">
+                <span class="form-message"></span>
             </div>
 
-            <!-- End: Search button-->
-
-        </div>
-
-        <div id="slider">
-            <div class="content">
-                <h2 class="text-heading">New York</h2>
-                <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
             </div>
 
-        </div>
-
-        <div id="content">
-            <!-- About section -->
-            <div id="band" class="content-section">
-                <h2 class="section-heading">THE BAND</h2>
-                <p class="section-sub-heading">We love music</p>
-                <p class="about-text">
-                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            <div class="row members-list">
-                <div class="col col-third text-center">
-                    <p class="member-name">Name</p>
-                    <img src="./assets/img/band1/bandmember.jpg" alt="Name" class="member-img">
-                </div>
-                <div class="col col-third text-center">
-                    <p class="member-name">Name</p>
-                    <img src="./assets/img/band1/bandmember.jpg" alt="Name" class="member-img">
-                </div>
-                <div class="col col-third text-center">
-                    <p class="member-name">Name</p>
-                    <img src="./assets/img/band1/bandmember.jpg" alt="Name" class="member-img">
-                </div>
-                <div class="clear"></div>
-                </div>
-            </div>
-             <!-- Tour section -->
-             <div id="tour" class="tour-section">
-                 <div class="content-section">
-                    <h2 class="section-heading text-white">TOUR DATES</h2>
-                    <p class="section-sub-heading text-white">Remember to book your tickets!</p>
-
-                    <!-- Tickets-->
-                    <ul class="tickets-list">
-                        <li>September <span class="sold-out">Sold out</span></li>
-                        <li>October <span class="sold-out">Sold out</span></li>
-                        <li>November <span class="quantity">3</span></li>
-                    </ul>
-
-                    <!-- Places -->
-                    <div class="row places-list">
-                        <div class="col place-item">
-                            <img src="./assets/img/places/place1.jpg" alt="New York" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">New York</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="col place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
-                            </div>
-                        </div>
-                        <div class="col place-item">
-                            <img src="./assets/img/places/place2.jpg" alt="Paris" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">New York</h3>
-                                <p class="place-time">Sat 28 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
-                            </div>
-                        </div>
-                          <div class="col col-third">
-                            <img src="./assets/img/places/place3.jpg" alt="New York" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">San Francisco</h3>
-                                <p class="place-time">Sun 29 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
-                            </div>
-                        </div>
-                    </div>
-             </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
             </div>
 
-                <!-- Begin: Contact section-->
-             <div id="contact"  class="content-section">
-                <h2 class="section-heading">CONTACT</h2>
-                <p class="section-sub-heading">Fan? Drop a note!</p>
-               
-                <div class="row contact-content">
-                    <div class="col col-half contact-info">
-                        <p><i class="ti-location-pin"></i>Chicago, US</p>
-                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
-                    </div>
-                    <div class="col col-half contact-form">
-                        <form action="">
-                            <div class="row">
-                                <div class="col col-half">
-                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
-                                </div>
-                                <div class="col col-half">
-                                    <input type="email" name="" 
-                                    placeholder="Email" id="" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mt-8">
-                                <div class="col col-full">
-                                    <input type="text" name="" 
-                                    placeholder="Message" id="" class="form-control">
-                                </div>
-                            </div>
-                            <input class="btn pull-right mt-16" type="submit" value="SEND">
-                    </div>
-                </div>
-                <input class="form-submit-btn mt-16" type="submit" value="">
+            <div class="form-group">
+                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                <span class="form-message"></span>
             </div>
-              <!-- End: Contact section -->
 
-              <div class="map-section">
-                  <img src="./assets/img/map.jpg" alt="Map">
-              </div>
-        </div>
-    
-        <div id="footer">
-            <div class="social-list">
-                <a href=""><i class="ti-facebook"></i></a>
-                <a href=""><i class="ti-instagram"></i></a>
-                <a href=""><i class="ti-youtube"></i></a>
-                <a href=""><i class="ti-pinterest"></i></a>
-                <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-linkedin"></i></a>
-            </div>   
-            <p class="copyright">Powered by <a href="">w3.css</a></p>
+            <button class="form-submit">Đăng ký</button>
+        </form>
+
     </div>
-</div>
-<div class="modal js-modal">
-    <div class="modal-container js-modal-container">
-        <div class="modal-close js-modal-close">
-            <i class="ti-close"></i>
-        </div>
-        
-        <header class="modal-header">
-            <i class="modal-heading-icon ti-bag"></i>
-            Tickets
-        </header>
 
-        <div class="modal-body">
-            <label for="ticket-quantity" class="modal-label">
-                <i class="ti-shopping-cart"></i>
-                Tickets, $15 per person
-            </label> 
-            <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
-            
-            <label for="ticket-email" class="modal-label">
-                <i class="ti-user"></i>
-                Send to
-            </label> 
-            <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email..."> 
-
-            <button id="buy-tickets">
-                Pay <i class="ti-check"></i>
-            </button>
-        </div>
-
-        <footer class="modal-footer">
-            <p class="modal-help">Need <a href="">help?</a></p>
-        </footer>
-    </div>
-</div>
+    <script language="JavaScript" src="validator.js"></script>
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.js-modal')
-        const modalContainer = document.querySelector('.js-modal-container')
-        const modalClose = document.querySelector('js-modal-close')
 
-        // Hàm hiển thị modal mua vé ( thêm class open vào modal)
-        function showBuyTickets() {
-            modal.classList.add('open')
-        }
+        // Mong muốn của chúng ta
+        Validator({
+            form: '#form-1',
+            errorSelector: '.form-message',
+            rules: [    
+                Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isEmail('#email'),
+                Validator.isRequired('#email'),
+                Validator.minLength('#password', 6),
+                Validator.isRequired('#password_confirmation'),
+                Validator.isConfirmed('#password_confirmation', function () {
+                    return document.querySelector('#form-1 #password').value;
+                }, 'Mật khẩu nhập lại không chính xác')
+            ]   
+        });
 
-        // Hàm ẩn modal mua vé ( gỡ bỏ class open của modal)
-        function hideBuyTickets() {
-            modal.classList.remove('open')
-        }
-
-        // Lặp qua từng thẻ button và nghe hành vi click
-        for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets)
-        }
-
-        // Nghe hành vi click vào button close
-        modalClose.addEventListener('click', hideBuyTickets)
-
-        modal.addEventListener('click',  hideBuyTickets)
-
-        modalContainer.addEventListener('click', function (event) {
-            event.stopPropagation()
-        })
     </script>
 </body>
-</htm
+</html>
