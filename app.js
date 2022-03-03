@@ -1,32 +1,47 @@
-const numbers = document.getElementsByClassName('btn');
-const result = document.getElementsById("result");
-
-for (let number of numbers) {
-    number.addEventListener('click', function () {
-        result.innerHTML += this.value
-    });
-}
-
-function equal() {
-    let res = result.innerHTML
-    let output = eval(res)
-    result.innerHTML = output
-}
-
-function clean() {
-    result.innerHTML = " "
-}
-
-function undo() {
-    let res = result.innerHTML
-    result.innerHTML = res.substring(0, res.length - 1);
-}
-// Dark & light Mode
-let  checkbox = document.querySelector('input[name-theme]');
-checkbox.addEventListener('change', function () {
-    if (this.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
+// Toast function
+function toast({ title = "", message = "", type = "info", duration = 3000 }) {
+    const main = document.getElementById("toast");
+    if (main) {
+      const toast = document.createElement("div");
+  
+      // Auto remove toast
+      const autoRemoveId = setTimeout(function () {
+        main.removeChild(toast);
+      }, duration + 1000);
+  
+      // Remove toast when clicked
+      toast.onclick = function (e) {
+        if (e.target.closest(".toast__close")) {
+          main.removeChild(toast);
+          clearTimeout(autoRemoveId);
+        }
+      };
+  
+      const icons = {
+        success: "fas fa-check-circle",
+        info: "fas fa-info-circle",
+        warning: "fas fa-exclamation-circle",
+        error: "fas fa-exclamation-circle"
+      };
+      const icon = icons[type];
+      const delay = (duration / 1000).toFixed(2);
+  
+      toast.classList.add("toast", `toast--${type}`);
+      toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+  
+      toast.innerHTML = `
+                      <div class="toast__icon">
+                          <i class="${icon}"></i>
+                      </div>
+                      <div class="toast__body">
+                          <h3 class="toast__title">${title}</h3>
+                          <p class="toast__msg">${message}</p>
+                      </div>
+                      <div class="toast__close">
+                          <i class="fas fa-times"></i>
+                      </div>
+                  `;
+      main.appendChild(toast);
     }
-})
+  }
+  
